@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+
+  </head>
+  <body>
+      <div class="section">
+          <div class="container">
+              <h5 class="center"><span class="red-text">Chord</span> Panel</h5>
+          </div>
+      </div>
+
+      <div class="divider"></div>
+      
+      <div class="section">
+              <div class="row">
+                  <h6 class="center">Choice a <mark><i>new Key</i></mark> for chord</h6>
+              </div>
+
+              <form action="#">
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="c-key" />
+                  <label for="c-key">C Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="d-key" />
+                  <label for="d-key">D Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="e-key"  />
+                  <label for="e-key">E Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="f-key"  />
+                  <label for="f-key">F Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="g-key"  />
+                  <label for="g-key">G Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="a-key"  />
+                  <label for="a-key">A Key</label>
+                </p>
+                <p class="center">
+                  <input class="with-gap" name="group1" type="radio" id="b-key"  />
+                  <label for="b-key">B Key</label>
+                </p>
+              </form>
+
+      </div>
+
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+      <script>
+          $(function() {
+            $("#c-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("C");
+            });
+
+            $("#d-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("D");
+            });
+
+            $("#e-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("E");
+            });
+            
+            $("#f-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("F");
+            });
+            
+            $("#g-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("G");
+            });
+            
+            $("#a-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("A");
+            });
+            
+            $("#b-key").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .newContentReplace("B");
+            });
+          });
+
+      </script>
+  </body>
+</html>
