@@ -1,2 +1,2 @@
 # ChordChgKey
-Easy convert chord by desired Key
+- Convert chords easily by desired Key for guitar use in Google Docs
