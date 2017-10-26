@@ -95,18 +95,3 @@ function newContentReplace(new_key) {
 function outputToPDF() {
 }
 
-function test() {
-//  var test1 = extractContentToArray();
-//  Logger.log(test1);
-//  Logger.log(test1[2].split(" "));
-  var test2 = chordChangeByKey("C", "E", "D");
-  Logger.log(test2);
-//  var test3 = replaceChord("A");
-//  Logger.log(test3);
-//  var test2 = chordChangeByKey("C", "G", "Gsus4");
-//  Logger.log(test2);
-//  Logger.log("ABCD".indexOf("A"));
-//  newContentReplace("C");
-//  Logger.log(test4);
-}
-
