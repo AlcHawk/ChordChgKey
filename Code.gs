@@ -93,5 +93,21 @@ function newContentReplace(new_key) {
 }
 
 function outputToPDF() {
+  var source_doc = DocumentApp.getActiveDocument(),
+      source_ID = source_doc.getId(),
+      file_source = DriveApp.getFileById(source_ID),
+      file_setting = file_source.getAs('application/pdf'),
+      file_output = DriveApp.createFile(file_setting),
+      file_create = file_output.setName(source_doc.getName()+'.pdf');
+
+  var file_folder = file_source.getParents().next(),
+      folder_ID = file_folder.getId(),
+      folder = DriveApp.getFolderById(folder_ID),
+      file_ID = file_output.getId();
+
+  var org_folder = file_output.getParents().next();
+  folder.addFile(file_output);
+  org_folder.removeFile(file_output);
+  DocumentApp.getUi().alert(source_doc.getName()+'.pdf has been created');
 }
 

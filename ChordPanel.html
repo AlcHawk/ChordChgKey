@@ -21,6 +21,7 @@
                   <h6 class="center">Choice a <mark><i>new Key</i></mark> for chord</h6>
               </div>
 
+              <div>
               <form action="#">
                 <p class="center">
                   <input class="with-gap" name="group1" type="radio" id="c-key" />
@@ -51,6 +52,12 @@
                   <label for="b-key">B Key</label>
                 </p>
               </form>
+              </div>
+              
+              <div class="center">
+                <br/>
+                <a id="export-pdf" class="waves-effect waves-light btn blue lighten-2">export to PDF</a>
+              </div>
 
       </div>
 
@@ -102,6 +109,12 @@
               .withSuccessHandler()
               .newContentReplace("B");
             });
+            
+            $("#export-pdf").on('click', function() {
+              google.script.run
+              .withSuccessHandler()
+              .outputToPDF();
+            });            
           });
 
       </script>
